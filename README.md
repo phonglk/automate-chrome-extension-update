@@ -1,5 +1,8 @@
 # automate-chrome-extension-update
 Automate Chrome Extension Update Workflow
+
+Read this first https://developer.chrome.com/webstore/using_webstore_api 
+
 Node 7 is required
 For the firs time please create secret/config.json with content
 {

@@ -1,4 +1,4 @@
 #!/bin/sh
 
-node $(node -e "console.log(require('path').resolve(__dirname))")/updateCode.js
-node $(node -e "console.log(require('path').resolve(__dirname))")/updateToken.js
+node $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/updateCode.js
+node $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/updateToken.js

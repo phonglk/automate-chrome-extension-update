@@ -9,7 +9,7 @@ var rl = readline.createInterface({
 });
 
 rl.question(`Please go to this url to get the code then enter\n${url}\n`, (code) => {
-  require("fs").writeFileSync("./secret/code.json", JSON.stringify({code}));
+  require("fs").writeFileSync(require("path").join(__dirname, "./secret/code.json"), JSON.stringify({code}));
   console.log(`Written to 'secret/code.json' Please do not share this with any`);
   process.exit();
 });

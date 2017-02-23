@@ -14,7 +14,7 @@ try {
   const output = JSON.parse(outputStr);
   if (output.error) throw new Error(output.error);
   const token = output.access_token;
-  require("fs").writeFileSync("./secret/token.json", JSON.stringify({token}));
+  require("fs").writeFileSync(require("path").join(__dirname, "./secret/token.json"), JSON.stringify({token}));
   console.log(`Written to 'secret/token.json' Please do not share this with any`);
 } catch (e) {
   console.log(e);

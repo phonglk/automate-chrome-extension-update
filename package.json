@@ -1,0 +1,22 @@
+{
+  "name": "automate-chrome-extension-update",
+  "version": "1.0.0",
+  "description": "Automate Chrome Extension Update Workflow",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonglk/automate-chrome-extension-update.git"
+  },
+  "author": "Le Khoi-Phong",
+  "license": "SEE LICENSE",
+  "bugs": {
+    "url": "https://github.com/phonglk/automate-chrome-extension-update/issues"
+  },
+  "homepage": "https://github.com/phonglk/automate-chrome-extension-update#readme",
+  "dependencies": {
+    "googleapis": "^17.1.0"
+  }
+}

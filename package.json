@@ -1,6 +1,6 @@
 {
   "name": "automate-chrome-extension-update",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automate Chrome Extension Update Workflow",
   "main": "example.js",
   "scripts": {

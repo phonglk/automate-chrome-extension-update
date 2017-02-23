@@ -8,6 +8,10 @@ For the firs time please create secret/config.json with content
 }
 
 and run 'node ...'
+## Preparing
+
+Packed into ./prepare
+
 ### updateCode.js
 Get the link in the console then open the browser, copy the code and paste into the console
 

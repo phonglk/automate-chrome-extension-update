@@ -1,0 +1,4 @@
+#!/bin/sh
+
+node updateCode.js
+node updateToken.js

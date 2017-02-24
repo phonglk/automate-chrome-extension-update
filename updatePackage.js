@@ -9,9 +9,15 @@ try {
 }
 const command = generator.getUploadPackageCommand(token, config.APP_ID, process.argv[2]);
 console.log(command+'\n');
-const outputStr = require("child_process").execSync(command).toString();
+let outputStr = require("child_process").execSync(command).toString();
 try {
-  const output = JSON.parse(outputStr);
+  let output = JSON.parse(outputStr);
+  if (output.error) throw new Error(output.error);
+  console.log(JSON.stringify(output,null,2));
+
+  const command2 = generator.getPublishPackageCommand(token, config.APP_ID);
+  outputStr = require("child_process").execSync(command).toString();
+  let output = JSON.parse(outputStr);
   if (output.error) throw new Error(output.error);
   console.log(JSON.stringify(output,null,2));
 } catch (e) {

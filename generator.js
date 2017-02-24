@@ -14,9 +14,14 @@ function getUploadPackageCommand(TOKEN, APP_ID, FILE_NAME) {
   return `curl -H "Authorization: Bearer ${TOKEN}"  -H "x-goog-api-version: 2" -X PUT -T ${FILE_NAME} -v https://www.googleapis.com/upload/chromewebstore/v1.1/items/${APP_ID}`;
 }
 
+function getPublishPackageCommand(TOKEN, APP_ID) {
+  return `curl -H "Authorization: Bearer ${TOKEN}"  -H "x-goog-api-version: 2" -H "Content-Length: 0" -X POST -v https://www.googleapis.com/chromewebstore/v1.1/items/${APP_ID}/publish`;
+}
+
 module.exports = {
   getCodeRequestUrl,
   getAccessTokenCommand,
   getUploadStatusCommand,
   getUploadPackageCommand,
+  getPublishPackageCommand,
 }

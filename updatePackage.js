@@ -7,17 +7,23 @@ try {
   console.log("Error while loading the token, you may want to run updateToken first");
   process.exit();
 }
-const command = generator.getUploadPackageCommand(token, config.APP_ID, process.argv[2]);
-console.log(command+'\n');
-let outputStr = require("child_process").execSync(command).toString();
 try {
-  let output = JSON.parse(outputStr);
-  if (output.error) throw new Error(output.error);
-  console.log(JSON.stringify(output,null,2));
+  if (process.argv[2] != "skip") {
+    const command = generator.getUploadPackageCommand(token, config.APP_ID, process.argv[2]);
+    console.log(command+'\n');
+    let outputStr = require("child_process").execSync(command).toString();
+    let output = JSON.parse(outputStr);
+    if (output.error) throw new Error(output.error);
+    console.log(JSON.stringify(output,null,2));
+  } else {
+    let outputStr = "";
+    let output = {};
+  }
 
   const command2 = generator.getPublishPackageCommand(token, config.APP_ID);
-  outputStr = require("child_process").execSync(command).toString();
-  let output = JSON.parse(outputStr);
+  console.log(command2);
+  outputStr = require("child_process").execSync(command2).toString();
+  output = JSON.parse(outputStr);
   if (output.error) throw new Error(output.error);
   console.log(JSON.stringify(output,null,2));
 } catch (e) {

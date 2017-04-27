@@ -1,6 +1,6 @@
 {
   "name": "automate-chrome-extension-update",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Automate Chrome Extension Update Workflow",
   "main": "example.js",
   "scripts": {
@@ -16,7 +16,5 @@
     "url": "https://github.com/phonglk/automate-chrome-extension-update/issues"
   },
   "homepage": "https://github.com/phonglk/automate-chrome-extension-update#readme",
-  "dependencies": {
-    "googleapis": "^17.1.0"
-  }
+  "dependencies": {}
 }
